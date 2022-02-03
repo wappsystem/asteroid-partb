@@ -1,4 +1,5 @@
 <div id=D__ID >
+    VmInclude:'__CURRENT_PATH__/modal-form.html'
     <main class="main bg-light" id="content">
         <div class="main-content">
             <div class="content">
@@ -38,9 +39,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box ESS_1_box">
                         <div class="box-item">
-                            <h3>1. Sitting and reading</h3>
+                            <h3 id=ESS_1_Q>1. Sitting and reading</h3>
                             <div class="btns-group btns-group-sm">
                                 <div class="btn-check">
                                     <input type="radio" name="ESS_1" id="ESS_1_1" value=0 required/>
@@ -63,7 +64,7 @@
                         </div>
                     </div>
     
-                    <div class="box">
+                    <div class="box ESS_2_box">
                         <div class="box-item">
                             <h3>2. Watching TV</h3>
                             <div class="btns-group btns-group-sm">
@@ -87,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box ESS_3_box">
                         <div class="box-item">
                             <h3>3. Sitting, inactive in a public place (eg a theatre or a meeting)</h3>
                             <div class="btns-group btns-group-sm">
@@ -111,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box ESS_4_box">
                         <div class="box-item">
                             <h3>4. As a passenger in a car for an hour without a break</h3>
                             <div class="btns-group btns-group-sm">
@@ -135,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box" id="ESS_5_box">
                         <div class="box-item">
                             <h3>5. Lying down to rest in the afternoon when circumstances permit</h3>
                             <div class="btns-group btns-group-sm">
@@ -159,7 +160,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box ESS_6_box">
                         <div class="box-item">
                             <h3>6. Sitting and talking to someone</h3>
                             <div class="btns-group btns-group-sm">
@@ -183,7 +184,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box ESS_7_box">
                         <div class="box-item">
                             <h3>7. Sitting quietly after lunch without alcohol</h3>
                             <div class="btns-group btns-group-sm">
@@ -207,7 +208,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box ESS_8_box">
                         <div class="box-item">
                             <h3>8. In a car, while stopped for a few minutes in traffic</h3>
                             <div class="btns-group btns-group-sm">
@@ -243,8 +244,12 @@
 <script>
     function F__ID() {
         //-------------------------------------
-        VmInclude: '__COMPONENT__/f/form.01.js'
+        VmInclude: '__CURRENT_PATH__/form.01.js'
         //-------------------------------------
+            //$('#ESS_1_1').on('click',function(e){console.log("ABABAB");e.preventDefault();$('html, body').animate({ scrollTop: $('#ESS_5_box').offset().top-100}, 'fast');
+            //$('#modal_body__ID').html('Please answer all questions.');$('#alert__ID').click();})
+            
+            
         var before_submit = m.before_submit;
         m.before_submit = function (data, index) {
             data.ESS = (parseInt(data.ESS_1) + parseInt(data.ESS_2) + parseInt(data.ESS_3) + parseInt(data.ESS_4) + parseInt(data.ESS_5) + parseInt(data.ESS_6) + parseInt(data.ESS_7) + parseInt(data.ESS_8)).toString();

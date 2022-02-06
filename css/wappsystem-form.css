@@ -1,5 +1,5 @@
 #D__ID .formbox h3 {
-    font-family: 'Roboto Slab';
+    font-family: 'Asap';
     font-size: 24px;
     color: #FCFBF5;
     letter-spacing: 0;
@@ -10,7 +10,7 @@
     margin-top: -5px
 }
 #D__ID .formbox h7 {
-    font-family: 'Roboto Slab';
+    font-family: 'Asap';
     font-size: 16px;
     color: #FCFBF5;
     letter-spacing: 0;
@@ -29,31 +29,32 @@
     border-bottom: 1px solid #E5EEF0 !important 
 }
 #D__ID .form-group h4 {
-    font-family: 'Roboto Slab';
+    font-family: 'Asap';
     font-size: 16px;
     color: #00263A;
     letter-spacing: 0;
     line-height: 28px;
 }
 #D__ID .form-group h6 {
-    font-family: 'Roboto Slab';
+    font-family: 'Asap';
     font-size: 14px;
     color: #00263A;
     letter-spacing: 0;
     line-height: 28px;
 }
 #D__ID .small-label {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-weight:600;
     font-size: 14px;
     color: #444645;
 }
 #D__ID label {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-weight:600;
-    font-size: 14px;
+    font-size: 15px;
     color: #444645;
     line-height: 21px;
+    margin-bottom: 1.5rem;
 }
 #D__ID input[type="radio"] {
     margin-right: 5px !important
@@ -67,17 +68,17 @@
     border-radius: 3px 3px 3px 3px !important
 }
 #D__ID .form-group {
-    padding: 5px 15px !important;
-    margin-bottom: 0px !important
+    /*padding: 5px 15px !important;
+    margin-bottom: 0px !important;*/
 }
 #D__ID .form-group:hover {
      background-color: #FCFBF5
 }
-/* SUBMIT BUTTON */
+/* SUBMIT BUTTON 
 #D__ID .btn-primary, #D__ID .btn-primary:active, #D__ID .btn-primary:visited, #D__ID .btn-primary:focus {
     background-color: #00263A;
     border-color: #00263A;
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-weight: lighter;
     font-size: 12px;
     letter-spacing: 1px;
@@ -92,7 +93,7 @@
 #D__ID .btn-primary:hover {
     background-color: #506A88;
     border-color: #506A88;
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-weight: lighter;
     font-size: 12px;
     letter-spacing: 1px;
@@ -105,7 +106,7 @@
     margin: 15px;
 }
 #D__ID .btn-outline-light {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-weight: lighter;
     font-size: 12px;
     letter-spacing: 1px;
@@ -119,10 +120,10 @@
     padding-right: 25px
 }
 #D__ID .btn-outline-light:hover {
-    color: #13B51F;
+    color: #13B51F;*/
 }
 #D__ID p.note {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-weight: lighter;
     font-size: 16px;
     color: #939597;
@@ -156,10 +157,10 @@
     color:#fff;
 }
 #D__ID .radiobuttons:hover input ~ .checkmark {
-    background-color: #506A88;
+    background-color: #8b81ca;;
 }
 #D__ID .radiobuttons input:checked ~ .checkmark {
-    background-color: #13B51F;
+    background-color: #6e64ad;
 }
 #D__ID .checkmark:after {
     content: "";
@@ -231,37 +232,37 @@
     content:"✔";
 }
 #D__ID .form-group input[type=text] {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-size: 16px;
     color: #6D6F72;
 }
 #D__ID .form-group input[type=tel] {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-size: 16px;
     color: #6D6F72;
 }
 #D__ID .form-group input[type=email] {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-size: 16px;
     color: #6D6F72;
 }
 #D__ID .form-group input[type=number] {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-size: 16px;
     color: #6D6F72;
 }
 #D__ID .form-group select {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-size: 16px;
     color: #6D6F72;
 }
 #D__ID .form-group textarea {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-size: 16px;
     color: #6D6F72;
 }
 #D__ID fieldset.subquestions legend {
-    font-family: 'Nunito Sans';
+    font-family: 'Asap';
     font-size: 16px;
     color: #00263A;
     line-height: 21px;
@@ -280,7 +281,6 @@
     margin-left:-15px;
 }
 @media (min-width: 576px) {
-    #D__ID  fieldset.subquestions br { display: none; }
     #D__ID label {
         margin-left:0;
     }
@@ -295,8 +295,44 @@
     #D__ID .container {max-width:900px}
 }
 @media (min-width: 768px) {
+    #D__ID  fieldset.subquestions br { display: none; }
     #D__ID .container {max-width:900px}
 }
 @media (min-width: 576px) {
     #D__ID .container {max-width:900px}
+}
+@font-face {
+    font-family: Asap;
+    src: url(../asteroid-partb/fonts/Asap-Medium.woff2) format("woff2"), url(../asteroid-partb/fonts/Asap-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Asap;
+    src: url(../asteroid-partb/fonts/Asap-Bold.woff2) format("woff2"), url(../asteroid-partb/fonts/Asap-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Asap;
+    src: url(../asteroid-partb/fonts/Asap-Regular.woff2) format("woff2"), url(../asteroid-partb/fonts/Asap-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Asap;
+    src: url(../asteroid-partb/fonts/Asap-SemiBold.woff2) format("woff2"), url(../asteroid-partb/fonts/Asap-SemiBold.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Tiempos Headline;
+    src: url(../asteroid-partb/fonts/TiemposHeadline-Bold.woff2) format("woff2"), url(../asteroid-partb/fonts/TiemposHeadline-Bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }

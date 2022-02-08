@@ -1,5 +1,5 @@
 <div id=D__ID>
-    <div id="">
+    <div class="bg-light">
         <form id=F__ID>
             <div id=S1__ID>
                 <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-lg-1 col-sm-0 "></div>
                 </div>
-                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;' >
                     <div class="form-group box">
                         <h3>1. What is your age?</h3>
                         <div class="questiongroup">
@@ -1040,67 +1040,86 @@
                 </div>
             </div>
             <div id=S5__ID>
-                <div id=page5__ID class="row mr-0 ml-0 p-3" style="background-color:#1c2350;">
-                    <div class="col-lg-4 col-sm-0 text-center"></div>
-                    <div class="col-lg-4 col-sm-12 text-center">
-                        <span style="color:#888">Thank you for completing these questions. Based on the responses you
-                            have provided you <b>may be eligible</b> for the research study. <br>We will need to contact
-                            you to discuss this over the telephone. Please provide your phone number and e-mail address
-                            and we will contact you shortly.</b>
+                <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#1c2350;">
+                    <div class="col-lg-1 col-sm-0 "></div>
+                    <div class="col-lg-9 col-sm-12 text-center text-white">
+                        <span style="color:#888"></span>
+                        <h2>Asteroid Screening</h2>
                     </div>
-                    <div class="col-lg-4 col-sm-0 text-center"></div>
+                    <div class="col-lg-1 col-sm-0 "></div>
                 </div>
                 <div id=quest5__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
                     <div class="form-group box">
-                        <div class="questiongroup ">
-                            <fieldset class="subquestions">
-                                <label><span class="">First name</span>
-                                    <input class="form-control" type="text" name="first_name">
-                                </label><br>
-                                <label><span class="">Last name</span>
-                                    <input class="form-control" type="text" name="last_name">
-                                </label><br>
-                            </fieldset>
+                        <div class="row">
+                            <div class="col-sm control-group">
+                                <h3>You are eligible to participate!
+                                </h3>
+                            </div>
+                        </div> 
+                    </div>                     
+                    <div class="form-group box">
+                        <div class="row">
+                            <div class="col-sm control-group">
+                                <h5>Please proceed by reading the <a href="#" data-toggle="modal" data-target="#terms-txt">Participant Information Sheet(click here)</a> carefully and at your
+                                    own pace and tick the box for consent
+                                </h5>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group box">
-                        <div class="questiongroup ">
-                            <fieldset class="subquestions">
-                                <label style="width:100%"><span class="">Email Address</span>
-                                    <input class="form-control" type="email" name="email">
-                                </label><br>
-                            </fieldset>
-                        </div>
+                        <h5>I consent to participate in the study</h5>
+                        <div class="questiongroup">
+                          <fieldset>
+                            <label class="checkboxes">
+                              <input type="checkbox" name="Consent" value="Yes">
+                              <span class="check_checkmark"></span> Yes
+                            </label><br>
+                        </div>                              
                     </div>
-                    <div class="form-group box">
-                        <div class="questiongroup ">
-                            <fieldset class="subquestions">
-                                <label><span class="">Phone number</span>
-                                    <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required
-                                        placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
-                                </label><br>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div style="text-align:right">
-                        <button type="submit" id=submit1__ID d=1
-                            style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif"
-                            class="btn btn-success btn-lg">Submit</button>
-                    </div>
+                </div>
+                <div id=quest51__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
                     <br>
                     <hr>
                     <div class="text-center">
                         Contact Us
                         <br><br>
-                        Phone: (02) 9114 0421<br>
-                        Email: woolcock.cleverlights@sydney.edu.au<br><br>
+                        Phone: (02) 9114 0xxx<br>
+                        Email: woolcock.asteroid@sydney.edu.au<br><br>
                         Thanks you for your time and effort,<br>
-                        <b>The Clever Lights Research Team</b><br>
+                        <b>The Asteroid Research Team</b><br>
                     </div>
                 </div>
             </div>
         </form>
     </div>
+    <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="termsLabel">Patient Information sheet</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div align="right">
+                        <a href="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" download="">Download a copy of
+                            the Information Sheet
+                            <img src="https://img.icons8.com/office/40/000000/pdf.png"></a>
+                    </div>
+                    <object data="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" type="application/pdf"
+                        frameborder="0" width="100%" height="2000px">
+                        <embed src="pdf/Participant_Information_Sheet_and_Consent_Form.pdf" width="100%"
+                            height="2000px" />
+                    </object>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn_1" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
     <script>
         function F__ID() {
             VmInclude: '__COMPONENT__/f/form.01.js'
@@ -1116,12 +1135,16 @@
                 data.ISI = scores.ISI;
                 data.ISI_1 = scores.ISI_1;
                 //ISI-------------------
+                //SB-------------------
+                data.SB = scores.SB;
+                //SB-------------------
+                data.elig=scores.elig;
                 //-------------------------------------
                 return true;
             }
             //---------------------------------------
             $('#D__ID').on('load', function () {
-                $('#header').css('opacity', '0.8');
+                $('#header').css('opacity', '1');
                 $('#submit1__ID').show();
                 $('#s4q1__ID').hide();
                 $('#sleep_attacks__ID').removeAttr('required');
@@ -1146,7 +1169,7 @@
                 $('#night_terrors__ID').removeAttr('required');
                 $('#act_out__ID').removeAttr('required');
                 $('#nightmares__ID').removeAttr('required');
-                show_section(1);
+                show_section(5);
             });
             //---------------------------------------
             $("#D__ID input[name=fall_asleep]").on('change', function () {
@@ -1305,6 +1328,7 @@
                         scores.ISI >= 15 ||
                         scores.PHQ9 > 0.5) {
                         $('#F__ID *').removeAttr('disabled');
+                        scores.elig=0;
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
                         else $vm.load_module(m.prefix + 'not_elig', '', {});
@@ -1320,10 +1344,29 @@
                 else if (current_I == N) {
                     $('#F__ID *').removeAttr('disabled');
                     $('#submit1__ID').hide();
+                    scores.elig=1;
                     old_submit(event);
                 }
                 else show_section(current_I + 1);
             }
+            //--------------------------------
+            m.after_insert = function (data,index) {
+                var db=""; 
+                console.log(data.elig+" - "+JSON.stringify(index) + " - "+index.result.ops[0].UID)
+                if (m.prefix == undefined) { $vm.load_module('elig', '', {}); }
+                        else $vm.load_module(m.prefix + 'elig', '', {uid:index.result.ops[0].UID});
+                /*if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                var u="?username="+index.result.ops[0].UID+"&password="+$('#F__ID input[name=_Password').val();
+                $('#id__ID').text(index.result.ops[0].UID);
+                $('#password__ID').text($('#F__ID input[name=_Password').val());
+                //console.log(JSON.stringify(m))
+                var q_url=m.report.replace('$H',$vm.hosting_path)+u+db+d+p;
+                $('#refnum__ID').text(q_url);
+                $('#canact_registration__ID').attr("href",q_url)*/
+            }
+            //--------------------------------
         }
     </script>
     <style>

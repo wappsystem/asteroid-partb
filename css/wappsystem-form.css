@@ -157,7 +157,7 @@
     color:#fff;
 }
 #D__ID .radiobuttons:hover input ~ .checkmark {
-    background-color: #8b81ca;;
+    background-color: #8b81ca;
 }
 #D__ID .radiobuttons input:checked ~ .checkmark {
     background-color: #6e64ad;
@@ -210,10 +210,10 @@
     border-radius: 0%;
 }
 #D__ID .checkboxes:hover input ~ .check_checkmark {
-    background-color: #506A88;
+    background-color: #8b81ca;
 }
 #D__ID .checkboxes input:checked ~ .check_checkmark {
-    background-color: #13B51F;
+    background-color: #6e64ad;
 }
 #D__ID .check_checkmark:after {
     content: "";

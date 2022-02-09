@@ -1076,22 +1076,96 @@
                             </label><br>
                         </div>                              
                     </div>
-                </div>
-                <div id=quest51__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
-                    <br>
-                    <hr>
-                    <div class="text-center">
-                        Contact Us
-                        <br><br>
-                        Phone: (02) 9114 0xxx<br>
-                        Email: woolcock.asteroid@sydney.edu.au<br><br>
-                        Thanks you for your time and effort,<br>
-                        <b>The Asteroid Research Team</b><br>
+                    <div class="form-group box">
+                        <h3>Contact details</h3>
+                        <div class="questiongroup ">
+                            <fieldset class="subquestions">
+                                <label><span class="">First name</span>
+                                      <input class="form-control" type="text" name="first_name" >
+                                </label><br>
+                                <label><span class="">Family name</span>
+                                      <input class="form-control" type="text" name="last_name" >
+                                </label><br>
+                            </fieldset>
+                            <fieldset class="subquestions">
+                                <label><span class="">Mobile number</span>
+                                    <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
+                                </label><br>
+                            </fieldset>
+                            <fieldset class="subquestions">
+                                <label style="width:100%"><span class="">Email Address</span>
+                                    <input class="form-control" type="email" name="email" >
+                                </label><br>
+                            </fieldset>
+                            <div class="questiongroup box">
+                                <h3>Contact preference</h3>
+                                <fieldset class="pl-4">
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="contact" value="Text" required>
+                                        <span class="checkmark"></span>Text
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="contact" value="Email">
+                                        <span class="checkmark"></span>Email 
+                                    </label>
+                                    <label class="radiobuttons ">
+                                        <input type="radio" name="contact" value="Both">
+                                        <span class="checkmark"></span>Both 
+                                    </label>
+                                </fieldset>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group box" id="link__ID" style="display:none!important">
+                        <div class="text-center">
+                            Continue ..<br><br>
+                            <i>Click on the link below to continue. Save the link to your favorits so you can easlily find it, if you need to return to the quesstionnaires.</i><br><br>
+                            <a id=asteroind_registration__ID target="_blank" style="color:#000;" ><span style='font-size:1.2rem;font-weight:bold;' id=refnum__ID></span></a>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="box" style="text-align:right">
+                        <div class="box-item">
+                            <button type="submit" id="submit1__ID" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </div>
+                    <div id=quest51__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                        <br>
+                        <hr>
+                        <div class="text-center">
+                            Contact Us
+                            <br><br>
+                            Phone: (02) 9114 0xxx<br>
+                            Email: woolcock.asteroid@sydney.edu.au<br><br>
+                            Thanks you for your time and effort,<br>
+                            <b>The Asteroid Research Team</b><br>
+                        </div>
+                    </div>
+                    <!----------------------------------------->
+                    <div id="pw__ID" style='display:none'>
+                        <div class='row px-4'>
+                            <div class="col-sm-12 col-lg-12 row_participant__ID">
+                                <label class=''><span class=''>Record ID</span>
+                                    <input type=text class=form-control id=record__ID readonly>
+                                </label>
+                            </div>
+                        </div>
+                        <div class='row px-4'>
+                            <div class="col-sm-12 col-lg-6 ">
+                                <label class=''><span class=''>Password</span>
+                                    <input type=text class=form-control name=_Password>
+                                </label>
+                            </div>
+                            <div class="col-sm-12 col-lg-6">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
+<!----------------------------------------->
     <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -1138,14 +1212,12 @@
                 //SB-------------------
                 data.SB = scores.SB;
                 //SB-------------------
-                data.elig=scores.elig;
                 //-------------------------------------
                 return true;
             }
             //---------------------------------------
             $('#D__ID').on('load', function () {
                 $('#header').css('opacity', '1');
-                $('#submit1__ID').show();
                 $('#s4q1__ID').hide();
                 $('#sleep_attacks__ID').removeAttr('required');
                 $('#muscle_weakness__ID').removeAttr('required');
@@ -1169,7 +1241,8 @@
                 $('#night_terrors__ID').removeAttr('required');
                 $('#act_out__ID').removeAttr('required');
                 $('#nightmares__ID').removeAttr('required');
-                show_section(5);
+                show_section(4);
+                console.log(JSON.stringify(m))
             });
             //---------------------------------------
             $("#D__ID input[name=fall_asleep]").on('change', function () {
@@ -1328,43 +1401,46 @@
                         scores.ISI >= 15 ||
                         scores.PHQ9 > 0.5) {
                         $('#F__ID *').removeAttr('disabled');
-                        scores.elig=0;
                         old_submit(event);
                         if (m.prefix == undefined) { $vm.load_module('not_elig', '', {}); }
                         else $vm.load_module(m.prefix + 'not_elig', '', {});
                     }
                     else {
                         show_section(current_I + 1);
+                        $('#F__ID input[name=_Password').val($vm.vm_password(8,false));
+                        console.log("AA: "+$('#F__ID input[name=_Password').val())
                         $("input[name='first_name']").prop('required', 'true')
                         $("input[name='last_name']").prop('required', 'true')
                         $("input[name='email']").prop('required', 'true')
                         $("input[name='phone']").prop('required', 'true')
+                        $("input[name='contact']").prop('required', 'true')
+                        $("input[name='consent']").prop('required', 'true')
                     }
                 }
                 else if (current_I == N) {
                     $('#F__ID *').removeAttr('disabled');
                     $('#submit1__ID').hide();
-                    scores.elig=1;
                     old_submit(event);
+                    $('#link__ID').show();
                 }
                 else show_section(current_I + 1);
             }
             //--------------------------------
             m.after_insert = function (data,index) {
                 var db=""; 
-                console.log(data.elig+" - "+JSON.stringify(index) + " - "+index.result.ops[0].UID)
-                if (m.prefix == undefined) { $vm.load_module('elig', '', {}); }
-                        else $vm.load_module(m.prefix + 'elig', '', {uid:index.result.ops[0].UID});
-                /*if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                console.log(JSON.stringify(index) + " - "+index.result.ops[0].UID)
+                if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
                 var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
                 var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
                 var u="?username="+index.result.ops[0].UID+"&password="+$('#F__ID input[name=_Password').val();
                 $('#id__ID').text(index.result.ops[0].UID);
                 $('#password__ID').text($('#F__ID input[name=_Password').val());
                 //console.log(JSON.stringify(m))
-                var q_url=m.report.replace('$H',$vm.hosting_path)+u+db+d+p;
+                var q_url=m.questionnaires.replace('$H',$vm.hosting_path)+u+db+d+p;
                 $('#refnum__ID').text(q_url);
-                $('#canact_registration__ID').attr("href",q_url)*/
+                $('#asteroind_registration__ID').attr("href",q_url)
+                console.log($('#refnum__ID').text());
+                console.log($('#asteroind_registration__ID').html())
             }
             //--------------------------------
         }

@@ -12,7 +12,8 @@
         "panel-main-asteroid-ess-form":		    {url:"$H/m/ess-form.html",Table:"asteroid-ess-partb-record"},
         "panel-main-asteroid-psqi":      {url:"$H/m/psqi-data.html",Table:"asteroid-psqi-partb-record",form_module:"panel-main-asteroid-psqi-form"},
         "panel-main-asteroid-psqi-form":		    {url:"$H/m/psqi-form.html",Table:"asteroid-psqi-partb-record"},
-        "not_elig":                             {url:"$H/m/not_elig.html"}
+        "not_elig":                             {url:"$H/m/not_elig.html"},
+        "questionnaires":                       {url:"$H/m/oq-panel.html"},
     }
     //for(m in modules){$vm.module_list[m]=modules[m];}
 

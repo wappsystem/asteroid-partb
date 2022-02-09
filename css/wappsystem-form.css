@@ -172,7 +172,7 @@
     display: block !important;
 }
 /* Style the indicator (dot/circle) */
-#D__ID .container .checkmark:after {
+#D__ID  .checkmark:after {
     top: 7px;
     left: 7px;
     width: 8px;
@@ -180,7 +180,7 @@
     border-radius: 50%;
     background: white !important;
 }
-#D__ID .container .checkmark.no-dot:after {
+#D__ID .checkmark.no-dot:after {
     width: 0;
     height: 0;
 }
@@ -225,7 +225,7 @@
     display: block !important;
 }
 /* Style the indicator (dot/circle) */
-#D__ID .container .check_checkmark:after {
+#D__ID .check_checkmark:after {
     top: 0px;
     left: 6px;
     color:white;

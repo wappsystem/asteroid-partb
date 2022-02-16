@@ -31,27 +31,18 @@
         <!----------------------------------------------->
         <script app code>
             //---------------------------------------------
-            $VmAPI={};$vm.ver=[0.03,0.01]; $vm['jquery-ui-min-js']=1;
+            $VmAPI={};$vm.ver=[0.05,0.01]; $vm['jquery-ui-min-js']=1;
             $vm.flexindex=new FlexSearch({  doc: {id: "id",field: ["title","contents"]}    });
             $vm.hosting_path=window.location.href.substring(0, window.location.href.split('?')[0].lastIndexOf('/'));
             //---------------------------------------------
             $vm.module_list={
                 header:         {url:$vm.hosting_path+"/modules/site/header.html"},
                 footer:         {url:$vm.hosting_path+"/modules/site/footer.html"},
-                home:           {url:$vm.hosting_path+"/modules/site/home.html",router:1},
                 screening:      {url:$vm.hosting_path+"/modules/business/screening/form.html",Table:"asteroid-partb-screening", title:'Asteroid Study - Screening', questionnaires:"$H/m/oq-panel.html"},
                 
                 auth:           {url:$vm.hosting_path+"/modules/system/auth.html"},
-                //query:          {url:$vm.hosting_path+"/modules/system/query.html"},
                 vmext:          {url:$vm.hosting_path+"/modules/system/vm-extension.html"},
                 panel:          {url:$vm.hosting_path+"/modules/panels/panel.html"},
-                /*
-                jsonv:      {url:$vm.hosting_path+"/modules/system/viewer-json.html"},
-                gridv:      {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
-                gridv2:     {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
-                gridv3:     {url:$vm.hosting_path+"/modules/system/viewer-grid.html"},
-                arrayv:     {url:$vm.hosting_path+"/modules/system/viewer-array.html"},
-                */
             }
             //---------------------------------------------
             //$vm.first_module='home';
@@ -74,12 +65,10 @@
                 "wimr-staff-roster":"https://wimr-snapforms.woolcock.org.au",
                 "wapp":"https://api.wappsystem.com"
             }
-            $vm.api_default="wimr-staff-roster";
-            $vm.api_address='https://wimr-snapforms.woolcock.org.au';
+            $vm.api_default="wapp";
+            $vm.api_address="https://api.wappsystem.com"
             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){ 
                 $vm.localhost=true;
-                $vm.api_addresses["wimr-staff-roster"]="https://wimr-snapforms.woolcock.org.au:442";
-                $vm.api_address='https://wimr-snapforms.woolcock.org.au:442';
             }
             $vm._id=0;$vm.reload='';$vm.debug_message=true;
             //---------------------------------------------
@@ -167,11 +156,14 @@
             $vm.install=function(){
                 //---------------------------------------------
                 $vm.init();
+                //---------------------------------------------
+                //install now
                 $vm.load_component('header','header',{});
                 $vm.load_component('footer','footer',{});
                 $vm.install_module('auth','',{},function(name,id){});
-                //$vm.install_module('query','',{},function(name,id){});
                 $vm.install_module('vmext','',{},function(name,id){});
+                //---------------------------------------------
+                //install later
                 var install_one=function(m,t){
                     setTimeout(function (){ 
                         $.ajaxSetup({cache:true}); 
@@ -205,9 +197,10 @@
                 $vm.load_resource("https://use.fontawesome.com/releases/v5.14.0/css/all.css",function(){})
                 $vm.load_resource("https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css",function(){})
                 $vm.load_resource("https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js",function(){})
-                $vm.load_resource("https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js",function(){})
-                $vm.load_resource("https://sdk.amazonaws.com/js/aws-sdk-2.1.34.min.js",function(){})
-                $vm.load_resource("https://www.gstatic.com/charts/loader.js",function(){})
+                //here to add external resources link
+                //$vm.load_resource("https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js",function(){})
+                //$vm.load_resource("https://sdk.amazonaws.com/js/aws-sdk-2.1.34.min.js",function(){})
+                //$vm.load_resource("https://www.gstatic.com/charts/loader.js",function(){})
                 //------------------------------------
                 $vm.show_module($vm.first_module,{})
                 $vm.ready();
@@ -217,6 +210,7 @@
             //---------------------------------------------
             $vm.boot(); //start from here
             //=================================================
+            //background and header style while scrolling
             $(window).on('scroll', function() {
             if($vm.active_name=='home'){
                 var y=-$(window).scrollTop()/3;
@@ -277,6 +271,7 @@
                 }
             }
             body{background-size: cover; background-repeat: repeat-x; background-position: center top; background-attachment: fixed;}
+            /*background image*/
             .body_background_default{ background-image: url(https://images.unsplash.com/photo-1601929448175-41b3228fa3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);}
         </style>
         <!----------------------------------------------->
